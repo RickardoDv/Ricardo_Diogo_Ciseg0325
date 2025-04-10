@@ -7,4 +7,5 @@ for i in range(num):
         print ("O numero não é primo")
         
         
-        #errado
+        #errado3
+        
