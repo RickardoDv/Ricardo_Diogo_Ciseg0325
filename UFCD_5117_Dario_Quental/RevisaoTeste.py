@@ -52,19 +52,51 @@ print(list)
 
 
 #   Calculadora simples, que execute as operações de soma, subtração, multiplicação e divisão (com validação de entradas entre 1 e 1000).
+def listar():
+    print("lista")  
+    
+def calculadora():
+    num1=int(input("Insira o primeiro numero: "))
+    if num1<=0 and num1>=1000:
+        print("Numero inválido, deve ser entre 1 e 1000")
+    num2=int(input("Insira o segundo numero: "))
+    if num2<=0 and num2>=1000:
+        print("Numero inválido, deve ser entre 1 e 1000")
+        
+    opt=input("\nQual a operação a realizar?")   
+    match opt:
+        case("+"):
+            print("O resultado é:", num1+num2)
+        case("-"):
+            print("O resultado é:", num1-num2)
+        case("*"):
+            print("O resultado é:", num1*num2)
+        case("/"):
+            print("O resultado é:", num1/num2)
+        case(_):
+            print("Opção invalida")
+ 
+def menu():
+    print("===== MENU PRINCIPAL =====")
+    print("1. Ver números")
+    print("2. Calculadora")
+    print("3. Sair do programa")
 
-num1=int(input("Insira o primeiro numero: "))
-if num1>=0 and num1<=1000:
-    print("Numero inválido, deve ser entre 1 e 1000")
-    
-num2=int(input("Insira o segundo numero: "))
-if num2>=0 and num2<=1000:
-    print("Numero inválido, deve ser entre 1 e 1000")
+def main():
+    while True:
+        menu()
+        opcao = input("\nEscolha uma opção: ")
 
-print("Soma:", num1+num2)
-print("Subtração:", num1-num2)
-print("Multiplicação:", num1*num2)
-print("Divisão:", num1/num2)
-    
-    
-    
+        if opcao == '1':
+            print("---Listagem de números---")
+            listar()
+        elif opcao == '2':
+            print("---Calculadora---")
+            calculadora()
+        elif opcao == '3':
+            print("A sair do programa")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+main()
