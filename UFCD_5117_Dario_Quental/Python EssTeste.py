@@ -26,7 +26,22 @@ for letter in user_word:
         continue
     print(letter)
 """
-import os
-os.system('cls' if os.name == 'nt' else 'clear')
-my_list = [[0, 1, 2, 3] for i in range(2)]
-print(my_list[2][0]) 
+#import os
+#os.system('cls' if os.name == 'nt' else 'clear')
+
+#my_list = [[0, 1, 2, 3] for i in range(2)]
+#print(my_list[2][0]) 
+
+
+soma = 0
+
+num1=int(input("insira um numero: "))
+
+for i in range(1, num1):
+    if num1 % i == 0:
+        soma += i
+if soma == num1:
+    print("Numero perfeito")
+else:
+    print("Numero imperfeito")
+
