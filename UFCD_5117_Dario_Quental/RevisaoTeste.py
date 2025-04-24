@@ -1,8 +1,8 @@
-#	Leitura de até 50 valores de entrada (com validação para garantir que estejam entre 1 e 1000).
+#	"Leitura de até 50 valores de entrada" "(com validação para garantir que estejam entre 1 e 1000)"".
 #	Para cada valor inserido, o programa deve identificar se é um número primo, 
-# quantos divisores ele possui e se é um número perfeito e se é par ou ímpar.
+# quantos divisores ele possui e se é um "número perfeito" e se é "par ou ímpar".
 #	Para a exibição e armazenamento dos valores, o programa deve parar de 10 em 10 valores, 
-# e o usuário deverá ter a opção de sair e voltar ao menu principal.
+# e o usuário deverá ter a "opção de sair e voltar ao menu principal.""
 #	O programa deve exibir os resultados e, após processar 10 valores, 
 # perguntar ao usuário se deseja continuar ou parar.
 
@@ -33,13 +33,15 @@ def inserir():
             else:
                 print("Numero imperfeito")
     # Verificação de numero primo
+            verif = True
+            for it in range(2, int(num1**0.5)+1):
+                if num1 % it == 0:
+                    verif=False
+                    print("O numero não é primo")
+            if verif:
+                print("O numero é primo")
     # Verificação de divisores
     # Pergunta se quer continuar ou sair
-        if count%10==0:
-            resp=input("Deseja continuar? (s/n): ")
-            if resp!="s" or "S":
-                print("Programa encerrado pelo utilizador.")
-            break      
     else:
         print("O valor escolhido tem que estar entre 1 e 1000")  
 
