@@ -41,6 +41,11 @@ def inserir():
             if verif:
                 print("O numero é primo")
     # Verificação de divisores
+            divisores = []
+            for itt in range(1, num1 + 1):
+                if num1 % itt == 0:
+                    divisores.append(itt)
+            print(f"Os seus divisores são: {divisores}")
     # Pergunta se quer continuar ou sair
     else:
         print("O valor escolhido tem que estar entre 1 e 1000")  
