@@ -31,7 +31,15 @@ o utilizador irá inserir dois valores
 e depois deverá de aparecer a opção se o mesmo quer 
 somar ou subtrair 
 
-
+Res:
+num1=int(input("Introduza o primeiro valor "))
+num2=int(input("Introduza o segundo valor "))
+opt=input("Escolha soma(+) ou subtração(-)")
+match opt:
+    case ("+"):
+        print("O resultado da soma é: ", num1+num2)
+    case ("-"):
+        print("O resultado da subtração é: ", num1-num2)
 
 ## Exec 3.1 
 Deverá de criar uma função soma_subtracao
