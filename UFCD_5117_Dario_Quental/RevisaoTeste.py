@@ -61,25 +61,32 @@ def listar():
             break
 
 def calculadora():
-    num1=int(input("Insira o primeiro numero: "))
-    if num1<=0 and num1>=1000:
-        print("Numero inválido, deve ser entre 1 e 1000")
-    num2=int(input("Insira o segundo numero: "))
-    if num2<=0 and num2>=1000:
-        print("Numero inválido, deve ser entre 1 e 1000")
-
-    opt=input("\nQual a operação a realizar?")   
-    match opt:
-        case("+"):
-            print("O resultado é:", num1+num2)
-        case("-"):
-            print("O resultado é:", num1-num2)
-        case("*"):
-            print("O resultado é:", num1*num2)
-        case("/"):
-            print("O resultado é:", num1/num2)
-        case(_):
-            print("Opção invalida")
+    contador=0
+    while True:
+        num1=int(input("Insira o primeiro numero: "))
+        if num1<=0 and num1>=1000:
+            print("Numero inválido, deve ser entre 1 e 1000")
+        num2=int(input("Insira o segundo numero: "))
+        if num2<=0 and num2>=1000:
+            print("Numero inválido, deve ser entre 1 e 1000")
+        op=input("\nQual a operação a realizar?")   
+        match op:
+            case("+"):
+                print("O resultado é:", num1+num2)
+            case("-"):
+                print("O resultado é:", num1-num2)
+            case("*"):
+                print("O resultado é:", num1*num2)
+            case("/"):
+                print("O resultado é:", num1/num2)
+            case(_):
+                print("Opção invalida")
+        contador+=1
+        if contador%5==0:
+            continuar=input("Pretende continuar? Escreva Sim ou Não ")
+            if continuar != "sim":
+                break
+    print("Fim de programa")
 
 def menu():
     print("===== MENU PRINCIPAL =====")
