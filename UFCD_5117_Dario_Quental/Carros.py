@@ -6,8 +6,10 @@ class Carro:
         self.vel=0
         self.ligado=False
         self.luzes=False
-    
-    def getmarca (self):
+    def setmarca(self,marca):
+        self.marca=marca
+        
+    def getmarca (self,):
         return self.marca
     
     def getmodelo (self):
@@ -42,6 +44,10 @@ class Carro:
             self.vel-=20
             
 Carro1=Carro("BMW","M3","2020")
+Carro1.setmarca(input("Introduza nova marca"))
+print(Carro1.getmarca())
+print(Carro1.getmodelo())
+print(Carro1.getano())
 print("Velocidade", Carro1.getvelocidade())
 Carro1.Acelera(int(input("qual a Velocidade de 1 a 3")))
 print("Velocidade", Carro1.getvelocidade())
