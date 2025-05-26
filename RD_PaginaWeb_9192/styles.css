@@ -4,13 +4,13 @@ body {
     }
 
 h1 {
-    color: blue;
+    color: rgb(0, 0, 201);
     text-align: center;
     font-family:Arial, Helvetica, sans-serif;
     }
 h2 {
     text-align: center;
-    color: blue;
+    color: rgb(0, 0, 201);
     }
 div {
     text-align: center;
