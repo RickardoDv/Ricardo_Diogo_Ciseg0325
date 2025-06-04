@@ -3,7 +3,7 @@ import os
 
 lista_IP=list()
 
-rede="192.168.255."
+rede="192.168.10."
 
 for octeto in range(1, 255):
     ip = rede+ str(octeto)
